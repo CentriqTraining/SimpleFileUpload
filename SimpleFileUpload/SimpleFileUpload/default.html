@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.1.0.js"></script>
+    <script src="Scripts/DragAndDropSupport.js"></script>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        $(function () {
+            var fileServicesUrl = "/KBFileServices/Upload";
+
+            enableModalDragAndDropSupport($('#dropzone'), $('#thumbnail'), fileServicesUrl);
+        });
+    </script>
+</head>
+<body>
+    <div id="dropzone">
+
+    </div>
+
+    Drag and image to the drop zone and then it will show up below.
+
+    <div class="invisible">
+        <img id="thumbnail" width="300" />
+    </div>
+
+
+</body>
+</html>
